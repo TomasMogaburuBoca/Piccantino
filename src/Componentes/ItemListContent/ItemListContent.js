@@ -5,7 +5,7 @@ function ItemListContent() {
     return (
         <>
         <div>ItemListContent</div>
-        < ItemCount />
+        < ItemCount stock={10} initial={1}/>
         </>
     )
 }
