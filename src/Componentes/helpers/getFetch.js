@@ -1,43 +1,51 @@
 
-Productos = [
+let productos = [
     {id : 1,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },
     {id : 2,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 3,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 4,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 5,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 6,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 7,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
     },   
     {id : 8,
-        name: '',
+        name: 'pizza',
             type:'',
                 price: ''
-    }   
-]
+    },   
+];
+
+export const getFetch = () => {
+    return new Promise ((resolve) =>{
+        setTimeout (() =>{
+            resolve(productos)
+        }, 2000)
+    })
+}
