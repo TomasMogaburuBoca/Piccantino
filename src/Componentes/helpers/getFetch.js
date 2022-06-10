@@ -1,41 +1,41 @@
 
 let productos = [
-    {id : 1,
+    {id : '1',
         name: 'pizza',
             type:'',
                 price: ''
     },
-    {id : 2,
+    {id : '2',
         name: 'pizza',
             type:'',
                 price: ''
     },   
-    {id : 3,
+    {id : '3',
         name: 'pizza',
             type:'',
                 price: ''
     },   
-    {id : 4,
+    {id : '4',
         name: 'pizza',
             type:'',
                 price: ''
     },   
-    {id : 5,
+    {id : '5',
         name: 'pizza',
             type:'',
                 price: ''
     },   
-    {id : 6,
+    {id : '6',
         name: 'pizza',
             type:'',
                 price: ''
     },   
-    {id : 7,
+    {id : '7',
         name: 'pizza',
             type:'',
-                price: ''
+                price: '',
     },   
-    {id : 8,
+    {id : '8',
         name: 'pizza',
             type:'',
                 price: ''
