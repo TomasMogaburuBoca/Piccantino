@@ -3,6 +3,7 @@ import { getFetch } from "../../helpers/getFetch"
 
 import ItemList from "../ItemList/ItemList";
 
+import './ItemListContent.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ItemListContent = () => {
@@ -21,7 +22,7 @@ const ItemListContent = () => {
 
         return (
         <>
-            <div>
+            <div className="divCard">
                 <ItemList productos = { productos } />
             </div>                    
         </>
