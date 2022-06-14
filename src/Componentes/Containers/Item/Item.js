@@ -1,4 +1,4 @@
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Nav } from 'react-bootstrap';
 
 const Item = ({producto}) => {
     return (
@@ -14,7 +14,7 @@ const Item = ({producto}) => {
                                     <Card.Text>
                                         $ {producto.price}
                                     </Card.Text>
-                                <Button variant="primary">Agregar</Button>
+                                <Nav.Link href={`/detalle/${producto.id}`}><Button variant="primary">Detalle</Button></Nav.Link>
                             </Card.Body>
                 </Card>
             </>    

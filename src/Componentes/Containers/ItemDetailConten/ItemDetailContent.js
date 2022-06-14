@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
 import { getOneFetch } from '../../helpers/getFetch';
 import { ItemDetail } from './ItemDetail';
 
@@ -6,10 +8,11 @@ import './ItemDetailContent.css';
 
 
 const ItemDetailContent = () => {
-    const [producto, setProducto] = useState ({})
+    const [producto, setProducto] = useState ([])
+    const {id} = useParams()
 
     useEffect(() => {
-        getOneFetch()
+        getOneFetch(id)
             .then ((resp) => setProducto(resp))
             .catch ((err) => console.log(err))
         

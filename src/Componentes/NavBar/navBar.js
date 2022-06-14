@@ -9,6 +9,8 @@ function NavBar(){
                 <Navbar.Brand href="#home">Piccantino</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/category/pizza">Pizza</Nav.Link>
+                    <Nav.Link href="/category/postre">Postre</Nav.Link>
                     <Nav.Link href="/cart">Comida</Nav.Link>
                     <Nav.Link href="#pricing">Contacto</Nav.Link>
                 </Nav>
