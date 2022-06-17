@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { getOneFetch } from '../../helpers/getFetch';
-import { ItemDetail } from './ItemDetail';
+import { ItemDetail } from '../ItemDetailConten/ItemDetail';
 
 import './ItemDetailContent.css';
 
 
 const ItemDetailContent = () => {
-    const [producto, setProducto] = useState ([])
+    const [producto, setProducto] = useState ({})
     const {id} = useParams()
 
     useEffect(() => {

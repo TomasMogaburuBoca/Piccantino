@@ -1,23 +1,32 @@
-import {useReducer, useState} from 'react'
+import { useState } from 'react'
 
-function ItemCount({stock, initial}) {
-    const [contador, setContador] = useState (0)
+function ItemCount({stock, initial, onAdd}) {
+    const [count, setCount] = useState (initial)
     
 
-    function sumar() {
-        if (contador < stock) setContador(contador + 1)
+    function suma() {
+        if (count < stock) {
+            setCount(count + 1)
+        }
     }
-    function restar(){
-        if (contador > initial) setContador(contador - 1)
+    function resta(){
+        if (count > initial){
+            setCount(count - 1)
+        }
+    }
+    function agregar () {
+        onAdd (count)
     }
 
     return (
         <div>
-            <p>{contador}</p>
-            <button onClick={sumar}>Agregar</button>
-            <button onClick={restar}>Quitar</button>
+            <p>{count}</p>
+            <button onClick={suma}>Sumar</button>
+            <button onClick={resta}>Quitar</button>
+            <button onClick={agregar}>Agregar</button>
         </div>
     )
 }
+
 
 export default ItemCount

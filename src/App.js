@@ -19,7 +19,7 @@ function App() {
               <Route path="/carrito/:id" element={<Cart />} />
               <Route path="/detalle/:id" element={<ItemDetailContent />} />
             </Routes> 
-            < ItemCount stock={10} initial={1}/>
+            
         </BrowserRouter>
   );
 }

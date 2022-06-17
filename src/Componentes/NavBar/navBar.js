@@ -1,4 +1,5 @@
 import { Navbar, Container, Nav  } from 'react-bootstrap'
+import { Link, NavLink } from 'react-router-dom'
 import CartWidgets from '../CartWidgets/CartWidgets';
 
 function NavBar(){
@@ -8,11 +9,11 @@ function NavBar(){
                 <Container>
                 <Navbar.Brand href="#home">Piccantino</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/category/pizza">Pizza</Nav.Link>
-                    <Nav.Link href="/category/postre">Postre</Nav.Link>
-                    <Nav.Link href="/cart">Comida</Nav.Link>
-                    <Nav.Link href="#pricing">Contacto</Nav.Link>
+                    <Nav.Link to="/">Home</Nav.Link>
+                    <Nav.Link to="/categoria/pizza">Pizza</Nav.Link>
+                    <Nav.Link to="/categoria/postre">Postre</Nav.Link>
+                    <Nav.Link to="/cart">Comida</Nav.Link>
+                    <Nav.Link to="#pricing">Contacto</Nav.Link>
                 </Nav>
                 <CartWidgets />
                 </Container>
