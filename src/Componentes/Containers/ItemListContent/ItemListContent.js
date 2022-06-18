@@ -11,25 +11,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ItemListContent = () => {
     const [productos, setProductos] = useState([]);
 
-    const { categoriaId } = useParams();
-    console.log(categoriaId)
+    const { id } = useParams();
+    console.log(id)
 
     useEffect (() => {
-        if (categoriaId) {
-            getFetch()
+        getFetch()
             .then ((resp) => {
-                setProductos(resp.filter( producto => producto.categoria === categoriaId ));
+                setProductos(id?resp.filter( (producto) => producto.categoria === id ):resp)
             })
             .catch (err => console.log(err))
-        }
-    }, [categoriaId])
+        
+    }, [id])
 
 
         return (
         <>
             <div className="divCard">
                 <ItemList productos = { productos } />
-                {console.log(categoriaId)}
+                
             </div>                 
         </>
     

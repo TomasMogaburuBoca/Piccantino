@@ -20,7 +20,7 @@ export const ItemDetail = ( {producto} ) => {
                                     <Card.Text>
                                         $ {producto.price}
                                     </Card.Text>
-                                <ItemCount initial={0} stock={10} onAdd={onAdd}/>   
+                                <ItemCount initial={1} stock={10} onAdd={onAdd}/>   
                                 {/*<Button variant="primary">Agregar</Button>*/}
                             </Card.Body>
                 </Card>

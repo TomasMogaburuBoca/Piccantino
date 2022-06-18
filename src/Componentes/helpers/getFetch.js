@@ -66,7 +66,7 @@ export const getFetch = () => {
 export const getOneFetch = (id) => {
     return new Promise ((resolve) =>{
         setTimeout (() =>{
-            resolve(productos.find ((producto) => producto.id === id))
+            resolve(productos.find ((producto) => +producto.id === +id))
         }, 2000)
     })
 }
