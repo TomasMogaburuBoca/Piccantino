@@ -12,7 +12,7 @@ let productos = [
         name: 'pizza',
         categoria:'pizza',
                 price: '',
-                        img: {anchoa}
+                        img: 'https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062__340.jpg'
     },   
     {id : '3',
         name: 'pizza',
