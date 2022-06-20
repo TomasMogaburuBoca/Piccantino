@@ -22,9 +22,7 @@ function NavBar(){
                             <Link className='link' to="#pricing">Contacto</Link>
                         </div>
                         <div className='div-carrito'>
-                            <Link to="/cart"><img src={CarritoGris} className="carrito" alt="carrito"/>
-                                <Cart />
-                            </Link>
+                            <Link to="/cart"><img src={CarritoGris} className="carrito" alt="carrito"/></Link>
                         </div>
                     </Nav>
                 </Container>

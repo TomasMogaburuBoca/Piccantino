@@ -30,12 +30,12 @@ function ItemCount({stock, initial, onAdd}) {
             <button type="button" onClick={suma}>
             +
             </button></div>
-            <button onClick={onAdd}>Agregar al Carrito</button>
+            <button onClick={agregar}>Agregar al Carrito</button>
         
             </div>)
         }
         
-        if(stock==0){
+        if(stock===0){
             return(
             <p>Sin unidades disponibles</p>
             )
