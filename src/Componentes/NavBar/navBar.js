@@ -6,9 +6,13 @@ import './NavBar.css';
 import CartWidgets from '../CartWidgets/CartWidgets';
 import CarritoGris from '../../CarritoGris.png'
 import Cart from '../Cart/Cart';
+import { useContext } from 'react';
+import { CartContext } from '../CartContext/CartContex';
 
 
 function NavBar(){
+    const { IconCart } = useContext(CartContext)
+
     return(
         <>
             <Navbar bg="dark" variant="dark">
@@ -22,7 +26,7 @@ function NavBar(){
                             <Link className='link' to="#pricing">Contacto</Link>
                         </div>
                         <div className='div-carrito'>
-                            <Link to="/cart"><img src={CarritoGris} className="carrito" alt="carrito"/></Link>
+                            <Link to="/cart">< img src={CarritoGris} className="carrito" alt="carrito"/></Link>
                         </div>
                     </Nav>
                 </Container>

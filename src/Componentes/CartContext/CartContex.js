@@ -21,21 +21,26 @@ const CartContextProvider = ({children}) => {
     }
 
     const DelItem = (id) =>{
-        const item = cartList.filter((producto) => producto.id !== id)
+        const item = cartList.filter((producto) => producto.producto.id !== id)
         return serCartList (item)
+    }
+    
+    const InCart = (id) =>{
+        return cartList && cartList.some((i) => i.producto.id === id);
+    };
+
+    const IconCart = () =>{
+        return cartList.reduce ((acum, i) => acum + i.count, 0)
     }
 
     const TotalProducts = () =>{
         return cartList.reduce ((acum, i) => acum + i.count * i.producto.price, 0)
     }
 
-    const InCart = (id) =>{
-        return cartList && cartList.some((i) => i.producto.id === id);
-    };
 
 
     return (
-        <CartContext.Provider value={{AddToCart, cartList, EmptyCart, DelItem, TotalProducts}}>
+        <CartContext.Provider value={{AddToCart, cartList, EmptyCart, DelItem, TotalProducts, IconCart}}>
             {children}
         </CartContext.Provider>
     );
