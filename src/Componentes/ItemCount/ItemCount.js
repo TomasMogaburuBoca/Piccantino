@@ -20,7 +20,7 @@ function ItemCount({stock, initial, onAdd}) {
         onAdd (count)
     }
 
-    if(show&&stock>0){
+    if(show && stock > 0){
         return(<div>
             <div className="Counter"> <button type="button" onClick={resta}>
             -
@@ -35,13 +35,13 @@ function ItemCount({stock, initial, onAdd}) {
             </div>)
         }
         
-        if(stock===0){
+        if(stock === 0){
             return(
             <p>Sin unidades disponibles</p>
             )
         }
         
-        if (!show && stock>0){
+        if (!show && stock > 0){
             return(<Link to="/cart"><button>Ir al carrito</button></Link>)
         }
         

@@ -2,7 +2,13 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
 import { getFetch } from "../../helpers/getFetch"
-import { collection, getDocs, getFirestore, queryCollection } from  'firebase/firestore'
+import { 
+    collection,
+    getDocs,
+    getFirestore, 
+    query, 
+    where 
+} from  'firebase/firestore';
 import ItemList from "../ItemList/ItemList";
 
 import './ItemListContent.css';
@@ -16,29 +22,30 @@ const ItemListContent = () => {
 
 
     useEffect (() => {
-        const dataBase = getFirestore()
-        const queryCollection = collection (dataBase, 'productos')
-        getDocs (queryCollection)
-            .then (dataBase => setProductos(dataBase.docs.map( producto => ( {id: producto.id, ...producto.data()}))))
-            .catch(err => console.log(err))
-            
-                            //getFetch()
-                            //    .then ((resp) => {
-                            //        setProductos(id?resp.filter( (producto) => producto.categoria === id ):resp)
-                            //    })
-                            //    .catch (err => console.log(err))
-        
-    }, [bool])
+        const dataBase = getFirestore();
+        const queryCollection = collection (dataBase, 'productos');
+        getDocs (
+            id 
+                ? query(queryCollection, where ('categoria', '==', id)) 
+                : queryCollection)
+                .then ((dataBase) =>
+                    setProductos(
+                        dataBase.docs.map( (producto) =>
+                            ( { id: producto.id, ...producto.data(),
+                        }))
+                )
+            )
+            .catch(err => console.log(err));
+    }, [id]);
 
 
-        return (
+    return (
         <>
             <div className="divCard">
                 <ItemList productos = { productos } />
-                
             </div>                 
         </>
-    
-)}
+    );
+}
 
 export default ItemListContent

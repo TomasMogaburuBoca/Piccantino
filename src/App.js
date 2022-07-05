@@ -15,10 +15,6 @@ import CartContextProvider from './Componentes/CartContext/CartContex';
 function App() {
   return(
       <CartContextProvider>   
-        <Helmet>
-          <title>Piccantino</title>
-          <meta rel="icon" href="./PiccantinoIcon.png"></meta>
-        </Helmet>
         <BrowserRouter>
             <NavBar />
             <Routes>
