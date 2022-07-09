@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 import Toastify from 'toastify-js'
-import swal from 'sweetalert';
+
 
 export const CartContext = createContext( [] );
 
@@ -14,7 +14,7 @@ const CartContextProvider = ({ children }) => {
             Toastify({
                 text: "Este producto ya se encuentra en el carrito",
                 className: "info",
-                position: 'center',
+                position: 'right',
                 style: {
                     background: "blue",
                 }
@@ -25,6 +25,7 @@ const CartContextProvider = ({ children }) => {
                 Toastify({
                     text: "Agregado al carrito",
                     className: "info",
+                    position: 'right',
                     style: {
                         background: "green",
                     }
@@ -46,18 +47,21 @@ const CartContextProvider = ({ children }) => {
         return cartList && cartList.some((i) => i.producto.id === id);
     };
 
-    const TotalProducts = () =>{
+    const TotalProducts = () =>{   //IconCart
         return cartList.reduce ((acum, i) => acum + i.count, 0)
     }
 
-    const TotalPrice = () => {
-        return cartList.reduce((acum, i) => acum + (i.count * i.producto.price) ,0)
+    const TotalPrice = () => { //TotalProducts
+        return cartList.reduce((acum, i) => acum + i.count * i.producto.price ,0)
+    }
+
+    const Pay = (producto) => {
+        return (producto.id)
     }
 
 
-
     return (
-        <CartContext.Provider value={{AddToCart, cartList, EmptyCart, DelItem, TotalProducts, TotalPrice, InCart}}>
+        <CartContext.Provider value={{AddToCart, cartList, EmptyCart, DelItem, TotalProducts, TotalPrice, InCart, Pay}}>
             {children}
         </CartContext.Provider>
     );

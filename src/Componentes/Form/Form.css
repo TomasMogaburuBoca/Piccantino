@@ -1,0 +1,14 @@
+.form{
+    margin-top: 10px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.containerForm{
+    max-width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 4px;
+}

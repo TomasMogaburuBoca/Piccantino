@@ -11,7 +11,7 @@ function CartWidgets() {
             <img src={CarritoGris} className="carrito" alt="carrito" />
             <Nav.Link href="/cart">
                 <Cart />
-            </Nav.Link>
+            </Nav.Link>           
         </>
     )
 }

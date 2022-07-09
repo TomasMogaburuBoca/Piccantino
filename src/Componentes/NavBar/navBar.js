@@ -18,7 +18,7 @@ function NavBar(){
             <Navbar bg="dark" variant="dark">
                 <Container className='container'>
                     <Nav className="me-auto">
-                        <Navbar.Brand href="#home">Piccantino</Navbar.Brand>
+                        <Navbar.Brand href="/">Piccantino</Navbar.Brand>
                         <div className='div-menu'>
                             <Link className="link" to="/">
                                 Home

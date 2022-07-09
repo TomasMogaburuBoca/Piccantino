@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { Card, Button, NavLink } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../CartContext/CartContex';
 import ItemCount from '../../ItemCount/ItemCount';
 
@@ -26,7 +27,8 @@ export const ItemDetail = ( {producto} ) => {
                             <Card.Text>
                                 $ {price}
                             </Card.Text>
-                                    <ItemCount initial={1} stock={10} onAdd={onAdd} className='btn-primary'/>    
+                                    <ItemCount initial={1} stock={10} onAdd={onAdd} />  
+                                    <Link to="/cart"><Button>Seguir comprando</Button></Link>
                 </Card.Body>
             </Card>
         </>

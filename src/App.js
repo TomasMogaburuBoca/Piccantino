@@ -10,6 +10,7 @@ import ItemDetailContent from './Componentes/Containers/ItemDetailConten/ItemDet
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartContextProvider from './Componentes/CartContext/CartContex';
+import Forms from './Componentes/Form/Forms';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route index path="/categoria/:id" element={<ItemListContent />} />
               <Route path="/detalle/:id" element={<ItemDetailContent />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/forms" element={<Forms />}/> 
             </Routes> 
         </BrowserRouter>
       </CartContextProvider>  

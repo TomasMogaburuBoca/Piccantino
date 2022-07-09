@@ -22,32 +22,19 @@ function ItemCount({stock, initial, onAdd}) {
 
     if(show && stock > 0){
         return(<div>
-            <div className="Counter"> <button type="button" onClick={resta}>
+            <div className="Counter"> <button type="button" onClick={resta} className='btn-danger'>
             -
             </button>
             <p className="Cantidad">Cantidad {count}</p>
             
-            <button type="button" onClick={suma}>
+            <button type="button" onClick={suma} className='btn-primary'>
             +
             </button></div>
-            <button onClick={agregar}>Agregar al Carrito</button>
+            <button onClick={agregar} className='btn-success' >Agregar al Carrito</button>
         
             </div>)
         }
-        
-        if(stock === 0){
-            return(
-            <p>Sin unidades disponibles</p>
-            )
-        }
-        
-        if (!show && stock > 0){
-            return(<Link to="/cart"><button>Ir al carrito</button></Link>)
-        }
-        
 
-
-    
 }
 
 
