@@ -24,8 +24,8 @@ const Cart = () => {
                 <div className='DivDos'>
                     <p>Cantidad de productos agregados {TotalProducts}</p>
                     <p>Precio todal $ {TotalPrice}</p>
-                    <Button onClick={EmptyCart} variant="danger">Vaciar carrito</Button>
-                    <Link to='/pay' Element={<Pay />}><Button variant="primary">Finalizar compra</Button></Link> 
+                    <button onClick={EmptyCart} className='buttonVaciar'>Vaciar carrito</button>
+                    <Link to='/pay' Element={<Pay />}><button className='buttonFinalizar'>Finalizar compra</button></Link> 
                 </div>
             </div>
                 <Forms />

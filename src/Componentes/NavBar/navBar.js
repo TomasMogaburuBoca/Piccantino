@@ -1,24 +1,25 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav, Badge  } from 'react-bootstrap';
+import PiccantinoIcon from '../../PiccantinoIcon.png';
 
 import './NavBar.css';
 
 import CartWidgets from '../CartWidgets/CartWidgets';
 import CarritoGris from '../../CarritoGris.png'
 import Cart from '../Cart/Cart'
-import { useContext } from 'react';
+import { Children, useContext } from 'react';
 import { CartContext } from '../CartContext/CartContex';
 
 
 function NavBar(){
-    const { IconCart, cartList, InCart } = useContext(CartContext);
+    const { IconCart, cartList, InCart, TotalProducts } = useContext(CartContext);
     
     return(
         <>
-            <Navbar bg="dark" variant="dark">
+            <Navbar className='navbar'>
                 <Container className='container'>
                     <Nav className="me-auto">
-                        <Navbar.Brand href="/">Piccantino</Navbar.Brand>
+                        <Navbar.Brand href="/"><img src={PiccantinoIcon} style={{height:'50px', width:'50px'}}></img></Navbar.Brand>
                         <div className='div-menu'>
                             <Link className="link" to="/">
                                 Home
@@ -32,9 +33,11 @@ function NavBar(){
                         </div>
                         <div className='div-carrito'>
                             <Link to="/cart">
-                                
-                                    < img src={CarritoGris} className="carrito" alt="carrito" /><Badge bg="primary">{cartList.length === 0 ? '' : InCart()}</Badge>
-                                
+                                {cartList.length === 0
+                                    ?
+                                    <img src={CarritoGris} className="carrito" alt="carrito" />
+                                        : 
+                                    TotalProducts()}
                             </Link>
                         </div>
                     </Nav>

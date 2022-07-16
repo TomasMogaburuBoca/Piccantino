@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../CartContext/CartContex';
 import ItemCount from '../../ItemCount/ItemCount';
 
+import './ItemDetailContent.css';
 
 
 export const ItemDetail = ( {producto} ) => {
@@ -16,7 +17,7 @@ export const ItemDetail = ( {producto} ) => {
 
     return (
         <>
-            <Card className="divCard" style={{ width: '18rem' }}>
+            <Card className="divCard" style={{ width: '18rem', border:'1px solid grb(3, 3, 43)' }}>
                     <Card.Body>
                         <Card.Img className="cardImg" variant="top" src={img} />
                         <Card.Title>{`${name} - ${categoria}`}</Card.Title>
@@ -28,7 +29,7 @@ export const ItemDetail = ( {producto} ) => {
                                 $ {price}
                             </Card.Text>
                                     <ItemCount initial={1} stock={10} onAdd={onAdd} />  
-                                    <Link to="/cart"><Button>Seguir comprando</Button></Link>
+                                    <Link to="/"><Button className='btn'>Seguir comprando</Button></Link>
                 </Card.Body>
             </Card>
         </>

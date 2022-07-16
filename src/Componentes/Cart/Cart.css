@@ -13,5 +13,19 @@
     width: 50%;
 
 }
-
+.buttonFinalizar, .buttonVaciar{
+    margin: 2px;
+}
+.buttonVaciar:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    margin: 2px;
+}
+.buttonFinalizar:hover{
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    margin: 2px;
+}
 

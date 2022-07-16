@@ -3,7 +3,8 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    border: 1px solid rgb(3, 3, 43);
+    /*justify-content: space-around;*/
 }
 img{
     width: 100px;

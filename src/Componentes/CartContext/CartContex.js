@@ -13,11 +13,10 @@ const CartContextProvider = ({ children }) => {
         if (InCart(producto.id)){
             Toastify({
                 text: "Este producto ya se encuentra en el carrito",
-                className: "info",
-                position: 'right',
-                style: {
-                    background: "blue",
-                }
+                duration: 3000,
+                style: {            
+                    background: "linear-gradient(to right, #830202, #63020296 )",
+                },
             }).showToast();
         }else {
             serCartList( [...cartList, {producto, count}] );
@@ -27,7 +26,7 @@ const CartContextProvider = ({ children }) => {
                     className: "info",
                     position: 'right',
                     style: {
-                        background: "green",
+                        background: "linear-gradient(to right, #00b09b, #96c93d)",
                     }
                 }).showToast();
             }, 100);
@@ -52,7 +51,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     const TotalPrice = () => { //TotalProducts
-        return cartList.reduce((acum, i) => acum + i.count * i.producto.price ,0)
+        return cartList.reduce((acum, i) => acum + (i.count * i.producto.price) ,0)
     }
 
     const Pay = (producto) => {

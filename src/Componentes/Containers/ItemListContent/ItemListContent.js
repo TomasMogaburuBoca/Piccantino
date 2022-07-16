@@ -16,10 +16,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ItemListContent = () => {
     const [productos, setProductos] = useState([]);
-    const [bool, setBool] = useState(true)
 
     const { id } = useParams();
-
 
     useEffect (() => {
         const dataBase = getFirestore();
@@ -36,14 +34,15 @@ const ItemListContent = () => {
                 )
             )
             .catch(err => console.log(err));
+            
     }, [id]);
 
 
     return (
-        <>
-            <div className="divCard">
-                <ItemList productos = { productos } />
-            </div>                 
+        <>  
+                <div className="divCard">
+                    <ItemList productos = { productos } />
+                </div>                     
         </>
     );
 }
