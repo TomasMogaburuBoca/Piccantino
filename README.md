@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-Piccantino E-commerce
-
-# Getting Started with Create React App
-=======
 # Piccantino E-Commerce
->>>>>>> 26ef00a2ea00dfa6109f1f11fe29efa8dee9c318
 
 Este proyecto esta realizado con Boostraps, agregando alguno componentes como Toastify.
 
