@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Piccantino/static/css/main.5a2afc26.css",
+    "main.js": "/Piccantino/static/js/main.675e7044.js",
+    "static/js/787.e0bf0af7.chunk.js": "/Piccantino/static/js/787.e0bf0af7.chunk.js",
+    "static/media/anchoa.jpg": "/Piccantino/static/media/anchoa.2f53c02da9fb49d4e83e.jpg",
+    "static/media/PiccantinoIcon.png": "/Piccantino/static/media/PiccantinoIcon.51af9f96c17a4d67abdc.png",
+    "static/media/CarritoGris.png": "/Piccantino/static/media/CarritoGris.50d5dbbb5ba1bac7e4a2.png",
+    "index.html": "/Piccantino/index.html",
+    "main.5a2afc26.css.map": "/Piccantino/static/css/main.5a2afc26.css.map",
+    "main.675e7044.js.map": "/Piccantino/static/js/main.675e7044.js.map",
+    "787.e0bf0af7.chunk.js.map": "/Piccantino/static/js/787.e0bf0af7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a2afc26.css",
+    "static/js/main.675e7044.js"
+  ]
+}
