@@ -17,7 +17,7 @@ const Pay = () => {
             );
         }
         }, [cart]);
-    
+
         return (
             <>
                 <div className="checkout container">
