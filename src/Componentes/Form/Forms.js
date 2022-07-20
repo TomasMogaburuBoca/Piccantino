@@ -55,7 +55,7 @@ const Forms = () => {
                         placeholder='Código Postal'
                     >
                     </input>
-                    <button onClick={ Pay } className='pay'>Finalizar compra</button>
+                    <button className='pay'>Finalizar compra</button>
                 </div>
             </form>
         </>   

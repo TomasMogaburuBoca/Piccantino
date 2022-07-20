@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import CartItem from '../Cart/CartItem';
 import { CartContext } from '../CartContext/CartContex';
+import Forms from '../Form/Forms';
 
 const Pay = () => {
     const { cartList, TotalProducts, TotalPrice } = useContext(CartContext)
@@ -18,17 +19,20 @@ const Pay = () => {
         }, [cart]);
     
         return (
-        <div className="checkout container">
-            <div className="card text-center">
-            <div className="card-header">Resúmen</div>
-            <div className="card-body">
-                <h5 className="card-title">Total: ${TotalPrice}</h5>
-                <link to="/form" className="btn btn-primary">
-                Realizar compra
-                </link>
-            </div>
-            </div>
-        </div>
+            <>
+                <div className="checkout container">
+                    <div className="card text-center">
+                        <div className="card-header">Resúmen</div>
+                        <div className="card-body">
+                            <h5 className="card-title">Total: ${TotalPrice}</h5>
+                            <link to="/form" className="btn btn-primary">
+                            Realizar compra
+                            </link>
+                        </div>
+                    </div>
+                </div>
+                <Forms />
+            </>
         );
     };
 

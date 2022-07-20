@@ -11,6 +11,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartContextProvider from './Componentes/CartContext/CartContex';
 import Forms from './Componentes/Form/Forms';
+import Pay from './Componentes/Pay/Pay';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
               <Route index path="/categoria/:id" element={<ItemListContent />} />
               <Route path="/detalle/:id" element={<ItemDetailContent />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/forms" element={<Forms />}/> 
+              <Route path="/pay" element={<Pay />}/> 
             </Routes> 
         </BrowserRouter>
       </CartContextProvider>  

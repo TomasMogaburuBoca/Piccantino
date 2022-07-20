@@ -28,7 +28,6 @@ const Cart = () => {
                     <Link to='/pay' Element={<Pay />}><button className='buttonFinalizar'>Finalizar compra</button></Link> 
                 </div>
             </div>
-                <Forms />
         </>
     )
 }
